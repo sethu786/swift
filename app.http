@@ -1,0 +1,58 @@
+### Load 10 users from JSONPlaceholder
+GET http://localhost:3000/load
+
+
+### Get all data for a user by ID
+GET http://localhost:3000/users/999
+
+
+### Add a new user (PUT)
+PUT http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "id": 200,
+  "name": "John Doe",
+  "username": "jdoe",
+  "email": "john@example.com",
+  "address": {
+    "street": "Main Street",
+    "suite": "Apt. 1",
+    "city": "Metropolis",
+    "zipcode": "12345",
+    "geo": {
+      "lat": "10.0000",
+      "lng": "20.0000"
+    }
+  },
+  "phone": "123-456-7890",
+  "website": "johndoe.org",
+  "company": {
+    "name": "Doe Inc.",
+    "catchPhrase": "Innovating the future",
+    "bs": "synergize scalable systems"
+  },
+  "posts": [
+    {
+      "id": 201,
+      "title": "My first post",
+      "body": "This is the body of my first post.",
+      "comments": [
+        {
+          "id": 301,
+          "name": "Jane",
+          "email": "jane@example.com",
+          "body": "Nice post!"
+        }
+      ]
+    }
+  ]
+}
+
+
+### Delete a specific user by ID
+DELETE http://localhost:3000/users/999
+
+
+### Delete all users
+DELETE http://localhost:3000/users
